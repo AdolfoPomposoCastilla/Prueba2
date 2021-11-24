@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromo</title>
+</head>
+<body>
+    <script>
+        function checar(){
+            var x = document.getElementById("Txt");
+	var palabra=prompt(x).toLowerCase();
+ 
+ // eliminamos los espacios en blanco
+    palabra=palabra.replace(/ /g, "");
+
+ for (var i=0;i<palabra.length;i++){
+     if(palabra[i]!=palabra[palabra.length-i-1]){
+         return false;
+     }
+ }
+ return true;
+}
+
+if(checar())
+{
+ alert("Esto es palíndromo");
+}else{
+ alert("Esto no es palíndromo")
+}
+        
+    </script>
+</body>
+</html>
